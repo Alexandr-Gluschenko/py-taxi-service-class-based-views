@@ -42,11 +42,3 @@ class DriverListView(ListView):
 class DriverDetailView(DetailView):
     model = Driver
     queryset = Driver.objects.all()
-
-
-def driver_detail_view(request, pk):
-    driver = Driver.objects.get(pk=pk)
-    cars = driver.cars.select_related("manufacturer").all()
-
-    return render(request, "taxi/driver_detail.html",
-                  {"driver": driver, "cars": cars})

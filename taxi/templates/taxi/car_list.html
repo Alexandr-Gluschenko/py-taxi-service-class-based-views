@@ -11,22 +11,20 @@
 <table>
   <thead>
    <tr>
-     <th>ID</th>
      <th>Name</th>
      <th>Model</th>
-     <th>Year</th>
    </tr>
   </thead>
   <tbody>
   {% for car in car_list %}
   <tr>
     <td>
-      <a href="{% url 'taxi:car_detail' car.id %}">
+      <a href="{% url 'taxi:car-detail' car.id %}">
       {{ car.id }}
       </a>
     </td>
-    <td>{{ car.model }}</td>
     <td>{{ car.manufacturer.name }}</td>
+    <td>{{ car.model }}</td>
   </tr>
   {% endfor %}
 </tbody>

@@ -19,7 +19,7 @@ Driver list
   <tbody>
   {% for driver in driver_list %}
   <tr>
-      <a href="{% url 'taxi:driver_detail' driver.id %}">
+      <a href="{% url 'taxi:driver-detail' driver.id %}">
         {{ driver.username }}
       </a>
     </td>
@@ -30,7 +30,7 @@ Driver list
   </tbody>
   </table>
   {% else %}
-  <p>No cars are available.</p>
+  <p>No drivers are available.</p>
   {% endif %}
 {% endblock %}
 
